@@ -1,3 +1,18 @@
+document.addEventListener('keydown',function(event){
+    console.log(event);
+    if(event.keyCode == 38){
+        document.addEventListener('click',moveUp())
+    }
+    else if(event.keyCode == 37){
+        document.addEventListener('click',moveLeft())
+    }
+    else if(event.keyCode == 39){
+        document.addEventListener('click',moveRight())
+    }
+    else if(event.keyCode == 40){
+        document.addEventListener('click',moveDown())
+    }
+});
 function moveUp(){
     let tank=document.getElementById("tank").style.top;
     console.log(tank)
