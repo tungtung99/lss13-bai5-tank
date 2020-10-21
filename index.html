@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tank</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="tank.js"></script>
+</head>
+
+<body>
+    <div class="container" style="width: 900px; border: 2px solid black; border-radius: 5px; margin-top: 20px; background-color: cyan;">
+        <h1 style="text-align: center; color: red;">Game Tank</h1>
+        <div class="row">
+            <div class="col-sm-3">
+                <div style="width: 190px; height: 190px; border: 2px solid black;" id="battleFiled">
+                    <div
+                      style="top: 19px; left: 38px;width: 19px; height: 19px; background-image: url('tank.png');background-size: 100% 100%;position: relative;"
+                      id="tank">
+                    </div>
+                    <div
+                      style="top: 76px; left: 133px;width: 19px; height: 19px; background-image: url('boom.png');background-size: 100% 100%;position: relative;"
+                      id="boom">
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm-8" style="text-align: left;">
+                <div>
+                    <h3 id="message" style="color: red;"></h3>
+                    <button id="playagain" onclick="playagain()" hidden style="font-size: 20px;">Play again</button>
+                </div>
+            </div>
+        </div>
+        <h4 style="color: red;">Điều khiển:</h4>
+        <table style="margin-bottom: 20px;">
+            <tr>
+                <td colspan="3">
+                    <div style="text-align: center;"><button id="len" onclick="moveUp()" style="font-size: 20px; width: 40px; height: 40px;">⬆</button></div>
+                </td>
+            </tr>
+            <tr>
+                <td><button id="trai" onclick="moveLeft()" style="font-size: 20px; width: 40px; height: 40px;">⬅</button></td>
+                <td><button id="xuong" onclick="moveDown()" style="font-size: 20px; width: 40px; height: 40px;">⬇</button></td>
+                <td><button id="phai" onclick="moveRight()" style="font-size: 20px; width: 40px; height: 40px;">➡</button></td>
+            </tr>
+        </table>
+        
+
+    <script>
+        function playagain(){
+            location.reload();
+        }
+    </script>
+    </div>
+</body>
